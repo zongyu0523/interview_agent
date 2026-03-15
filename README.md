@@ -52,9 +52,10 @@ cp .env.example .env
 Edit `.env`:
 
 ```
-ANTHROPIC_API_KEY=sk-ant-...
-OPENAI_API_KEY=sk-...
+STORAGE_MODE=local
 ```
+
+> API keys are **not required** in `.env`. Users enter their own Anthropic or OpenAI key directly in the app UI — keys are stored in the browser and never saved on the server.
 
 ### 3. Run
 
