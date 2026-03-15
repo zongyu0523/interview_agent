@@ -300,6 +300,28 @@ export interface ScoreResult {
   better_version: string;
 }
 
+/* ═══════════════════════════════════════════
+   Reports API
+   ═══════════════════════════════════════════ */
+
+export interface SessionTask {
+  topic: string;
+  instruction: string;
+  status: string;
+  score?: number;
+  evaluation?: string;
+}
+
+/** GET /reports/{sessionId} — fetch session report with tasks */
+export async function getSessionReport(sessionId: string): Promise<{ tasks: SessionTask[] }> {
+  const res = await fetch(`${API_BASE}/reports/${sessionId}`, {
+    headers: authHeaders(),
+  });
+  if (!res.ok) throw new Error(await extractError(res, "Failed to load report"));
+  const data = await res.json();
+  return { tasks: data.tasks ?? [] };
+}
+
 /** POST /api/feedback/grammar — grammar correction */
 export async function getGrammarFeedback(text: string): Promise<GrammarResult> {
   const res = await fetch(`${API_BASE}/api/feedback/grammar`, {

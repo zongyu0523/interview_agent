@@ -644,7 +644,7 @@ export function InterviewCoach() {
 
                   {/* Ended -> SessionEnded, Active -> ChatInput */}
                   {activeSession.status === "completed" ? (
-                    <SessionEnded questions={totalRound} />
+                    <SessionEnded questions={totalRound} sessionId={activeSessionId} />
                   ) : (
                     <ChatInput
                       autoSpeak={autoSpeak}
