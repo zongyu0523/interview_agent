@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+
+# Environment
+.env
+
+# Claude
+.claude/
+
+# Data files (keep folder structure via .gitkeep)
+data/**/*.json
+data/**/*.jsonl
+data/**/*.log
+
+# Frontend
+src/web/node_modules/
+src/web/dist/
+
+# Static build output
+static/
