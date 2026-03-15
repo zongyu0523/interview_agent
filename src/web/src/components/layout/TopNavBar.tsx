@@ -56,7 +56,7 @@ export function TopNavBar() {
           </button>
 
           <a
-            href="https://github.com/zongyu0523/interview-agent"
+            href="https://github.com/zongyu0523/interview_agent"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-text-primary)]"
